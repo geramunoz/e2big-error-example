@@ -1,0 +1,13 @@
+{
+  "name": "e2big-error-example",
+  "version": "0.0.0",
+  "description": "A fresh new Architect project!",
+  "scripts": {
+    "start": "npx sandbox",
+    "test": "tape tests/**/*-test.js"
+  },
+  "devDependencies": {
+    "@architect/architect": "^10.3.3",
+    "tape": "^5.5.3"
+  }
+}
