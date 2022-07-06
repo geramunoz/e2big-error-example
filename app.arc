@@ -90,6 +90,12 @@ get /route85
 get /route86
 get /route87
 get /route88
+get /route89
+get /route90
+get /route91
+get /route92
+get /route93
+get /route94
 
 @aws
 # profile default
