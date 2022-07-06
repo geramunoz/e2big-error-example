@@ -77,6 +77,19 @@ get /route72
 get /route73
 get /route74
 get /route75
+get /route76
+get /route77
+get /route78
+get /route79
+get /route80
+get /route81
+get /route82
+get /route83
+get /route84
+get /route85
+get /route86
+get /route87
+get /route88
 
 @aws
 # profile default
