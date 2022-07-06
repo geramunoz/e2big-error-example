@@ -52,6 +52,31 @@ get /route47
 get /route48
 get /route49
 get /route50
+get /route51
+get /route52
+get /route53
+get /route54
+get /route55
+get /route56
+get /route57
+get /route58
+get /route59
+get /route60
+get /route61
+get /route62
+get /route63
+get /route64
+get /route65
+get /route66
+get /route67
+get /route68
+get /route69
+get /route70
+get /route71
+get /route72
+get /route73
+get /route74
+get /route75
 
 @aws
 # profile default
