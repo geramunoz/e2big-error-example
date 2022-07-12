@@ -14,6 +14,12 @@ jobs:
       - node/install-packages
       - run:
           command: npm run test
+      - run:
+          name: Print SO ulimits
+          command: ulimit -a
+      - run:
+          name: Print xargs limits
+          command: xargs --show-limits
 workflows:
   test:
     jobs:
