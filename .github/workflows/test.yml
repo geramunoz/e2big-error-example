@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Print SO ulimits
+        shell: bash
+        run: |
+          ulimit -a
       - uses: actions/setup-node@v3
         with:
           node-version: 14
