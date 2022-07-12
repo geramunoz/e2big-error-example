@@ -15,6 +15,10 @@ jobs:
         shell: bash
         run: |
           ulimit -a
+      - name: Print xargs limits
+        shell: bash
+        run: |
+          xargs --show-limits
       - uses: actions/setup-node@v3
         with:
           node-version: 14
