@@ -14,6 +14,10 @@ jobs:
       options: "--ulimit nofile=65536:65536"
     steps:
       - uses: actions/checkout@v3
+      - name: Print ARG_MAX efectively usable space
+        shell: bash
+        run: |
+          expr `getconf ARG_MAX` - `env|wc -c` - `env|egrep '^[^ ]+='|wc -l` \* 4 - 2048
       - name: Print SO ulimits
         shell: bash
         run: |
