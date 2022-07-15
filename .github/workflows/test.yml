@@ -3,12 +3,14 @@ name: Test
 on:
   push:
     branches:
-      "master"
+      - master
 
 jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
+    container:
+      image: node:14.17.1
     steps:
       - uses: actions/checkout@v3
       - name: Print SO ulimits
