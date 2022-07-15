@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: node:14.17.1
-      options: "--ulimit nofile=65536:65536"
+      options: "--ulimit nofile=65536 --ulimit core=0"
     steps:
       - uses: actions/checkout@v3
       - name: Print ARG_MAX efectively usable space
