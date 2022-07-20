@@ -3,14 +3,29 @@ name: Test
 on:
   push:
     branches:
-      "*"
+      - master
 
 jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
+    container:
+      image: node:14.17.1
+      options: "--ulimit nofile=65536 --ulimit core=0 --ulimit nproc=27757"
     steps:
       - uses: actions/checkout@v3
+      - name: Print ARG_MAX efectively usable space
+        shell: bash
+        run: |
+          expr `getconf ARG_MAX` - `env|wc -c` - `env|egrep '^[^ ]+='|wc -l` \* 4 - 2048
+      - name: Print SO ulimits
+        shell: bash
+        run: |
+          ulimit -a
+      - name: Print xargs limits
+        shell: bash
+        run: |
+          xargs --show-limits
       - uses: actions/setup-node@v3
         with:
           node-version: 14
